@@ -6,11 +6,17 @@ face = (dim1, dim2, options, indent1, indent2, start = { x:0, y:0, z:0 }) ->
 	corner2[dim1.dimension] += dim1.length + options.kerfing
 	corner2[dim2.dimension] += dim2.length + options.kerfing
 
-	[vertex1, side1..., vertex2] = edge(dim1, dim2, options, indent1, indent2, corner1, no)
-	[vertex3, side2..., vertex2] = edge(dim2, dim1, options, indent2, indent1, corner2, yes)
-	[vertex3, side3..., vertex4] = edge(dim1, dim2, options, indent1, indent2, corner2, yes)
-	[vertex1, side4..., vertex4] = edge(dim2, dim1, options, indent2, indent1, corner1, no)
+	[vertex1A, side1..., vertex2A] = edge(dim1, dim2, options, indent1, indent2, corner1, no)
+	[vertex3A, side2..., vertex2B] = edge(dim2, dim1, options, indent2, indent1, corner2, yes)
+	[vertex3B, side3..., vertex4A] = edge(dim1, dim2, options, indent1, indent2, corner2, yes)
+	[vertex1B, side4..., vertex4B] = edge(dim2, dim1, options, indent2, indent1, corner1, no)
+	
+	# Third vertex has to be taken from either edge 2 or edge 3
+	# depending which vertex was the unnotched one in an open box
+	vertex = if dim2.dimension is 'z' then vertex3B else vertex3A
 
-	points = [vertex1, side1..., vertex2, side2.reverse()..., vertex3, side3..., vertex4, side4.reverse()...]
+	return [vertex1A, side1..., vertex2B, side2.reverse()..., vertex, side3..., vertex4A, side4.reverse()...]
 
 module.exports = face
+
+

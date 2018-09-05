@@ -38,7 +38,7 @@ class Application extends React.PureComponent
 			<p>"Same as ..." sets the tab length to the tab length of the other dimension.</p>
 		"""
 		@state =
-			type: 'closed'
+			type: 'open'
 			units: 'mm'
 			kerfing: '0'
 			thickness: '4'
@@ -123,6 +123,7 @@ class Application extends React.PureComponent
 	render: ->
 		<div className="form-horizontal">
 			<fieldset>
+				<RadioButtonView value={@state.type} options={@types} property="type" label="Box" onChange={@changePropertyHandler}/>
 				<RadioButtonView value={@state.units} options={@units} property="units" label="Units" onChange={@changePropertyHandler}/>
 				<hr />
 				<TextFieldView label="Width" property="width.length" value={@state.width.length} onChange={@changePropertyHandler} />

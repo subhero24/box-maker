@@ -12,9 +12,9 @@ module BVDSoftware
 				:width => 430,
 				:min_width => 430,
 				:max_width => 430,
-				:height => 572,
-				:min_height => 572,
-				:max_height => 572
+				:height => 637,
+				:min_height => 637,
+				:max_height => 637
 			})
 			dialog.set_file(File.join(File.expand_path(File.dirname(__FILE__)), 'index.html'))
 			dialog.add_action_callback 'message' do |dialog, message|
