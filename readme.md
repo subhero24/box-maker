@@ -4,10 +4,10 @@ This is a plugin for Sketchup which creates a 3d model of a box that can be lase
 
 Installing the plugin:
 
-- [Download the plugin](https://github.com/brunovandamme/box-maker/raw/master/build/box-maker.rbz)
-- Open Sketchup
-- Choose window > extension manager > install extension and find the .rbz file
-- After installing there is a new 'BoxMaker' menu under Extensions
+-   [Download the plugin](https://github.com/subhero24/box-maker/raw/master/build/box-maker.rbz)
+-   Open Sketchup
+-   Choose window > extension manager > install extension and find the .rbz file
+-   After installing there is a new 'BoxMaker' menu under Extensions
 
 ![Configure the box](doc/screenshot2.png)
 
