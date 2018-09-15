@@ -13,6 +13,8 @@ Installing the plugin:
 
 Configure the box that you want and click the "Make a box!" button and your sketchup model will be created.
 
+The plugin has its own toolbar button. You can enable it via View > Toolbars... > Box Maker. The toolbar button reads 'BOX'.
+
 If you need to export the faces for lasercutting, there is a [plugin for exporting faces to SVG](https://github.com/JoakimSoderberg/sketchup-svg-outline-plugin).
 
 Have fun boxing!

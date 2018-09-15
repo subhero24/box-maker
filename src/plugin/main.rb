@@ -50,6 +50,16 @@ module BVDSoftware
 		if not file_loaded?(__FILE__)
 			menu = UI.menu('Plugins')
 			menu.add_item('BoxMaker') { self.make_box }
+			toolbar = UI::Toolbar.new "Box Maker"
+			cmd = UI::Command.new("Create Box") { self.make_box }		
+			path = Sketchup.find_support_file "CreateBox.png", "plugins/box-maker/Images/"		
+			cmd.small_icon = path
+			cmd.large_icon = path
+			cmd.tooltip = "Make a box! Fast! Easy!"
+			cmd.status_bar_text = "This is a plugin for Sketchup which creates a 3d model of a box that can be laser cut."
+			cmd.menu_text = "Create 3D Box"				
+			toolbar = toolbar.add_item cmd
+			toolbar.show
 			file_loaded(__FILE__)
 		end
 	end
