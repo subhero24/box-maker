@@ -48,8 +48,8 @@ module BVDSoftware
 		end
 
 		if not file_loaded?(__FILE__)
-			menu = UI.menu('Plugins')
-			menu.add_item('BoxMaker') { self.make_box }
+			menu = UI.menu('Draw')
+			menu.add_item('Box') { self.make_box }
 			file_loaded(__FILE__)
 		end
 	end

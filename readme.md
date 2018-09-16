@@ -7,7 +7,7 @@ Installing the plugin:
 -   [Download the plugin](https://github.com/subhero24/box-maker/raw/master/build/box-maker.rbz)
 -   Open Sketchup
 -   Choose window > extension manager > install extension and find the .rbz file
--   After installing there is a new 'BoxMaker' menu under Extensions
+-   After installing there is a new 'Box' menuitem in the 'Draw' menu
 
 ![Configure the box](doc/screenshot2.png)
 
