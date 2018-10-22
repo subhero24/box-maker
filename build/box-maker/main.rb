@@ -4,7 +4,8 @@ require 'sketchup.rb'
 module BVDSoftware
 	module BoxMaker
 		def self.make_box
-			dialog = UI::HtmlDialog.new({
+			dialogtype = UI::HtmlDialog || UI::WebDialog
+			dialog = dialogtype.new({
 				:dialog_title => 'BoxMaker',
 				:preferences_key => 'be.bvdsoftware.boxmaker',
 				:scrollable => true,
@@ -19,7 +20,6 @@ module BVDSoftware
 			dialog.set_file(File.join(File.expand_path(File.dirname(__FILE__)), 'index.html'))
 			dialog.add_action_callback 'message' do |dialog, message|
 				geometry(JSON.parse(message))
-
 			end
 			dialog.show()
 		end
