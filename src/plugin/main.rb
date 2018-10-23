@@ -4,7 +4,12 @@ require 'sketchup.rb'
 module BVDSoftware
 	module BoxMaker
 		def self.make_box
-			dialogtype = UI::HtmlDialog || UI::WebDialog
+			begin
+				dialogtype = UI::HtmlDialog
+			rescue NameError
+				dialogtype = UI::WebDialog
+			end
+				
 			dialog = dialogtype.new({
 				:dialog_title => 'BoxMaker',
 				:preferences_key => 'be.bvdsoftware.boxmaker',
