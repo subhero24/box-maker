@@ -6,8 +6,11 @@
 	"license": "ISC",
 	"main": "build/main.js",
 	"scripts": {
+		"test": "yarn run test:lint && yarn run test:typecheck",
 		"build": "script/build.js",
-		"develop": "script/develop.js"
+		"develop": "script/develop.js",
+		"test:lint": "eslint src",
+		"test:typecheck": "tsc"
 	},
 	"keywords": [
 		"box",

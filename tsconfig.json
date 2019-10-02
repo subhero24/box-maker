@@ -1,5 +1,7 @@
 {
 	"compilerOptions": {
+		"noEmit": true,
+		"allowJs": true,
 		"checkJs": true,
 		"baseUrl": ".",
 		"jsx": "react",
@@ -10,6 +12,6 @@
 			"box-maker/*": ["./*"]
 		}
 	},
-	"include": ["src/**/*"],
+	"include": ["src/*.js"],
 	"exclude": ["node_modules", "**/node_modules/*"]
 }
