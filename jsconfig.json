@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"checkJs": true,
+		"baseUrl": ".",
+		"jsx": "react",
+		"lib": ["esnext", "dom"],
+		"moduleResolution": "node",
+		"paths": {
+			"/*": ["./src/*"],
+			"box-maker/*": ["./*"]
+		}
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "**/node_modules/*"]
+}

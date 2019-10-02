@@ -6,7 +6,8 @@
 	"license": "ISC",
 	"main": "build/main.js",
 	"scripts": {
-		"build": "webpack && cd build && zip -r -X ./box-maker.rbz *"
+		"build": "script/build.js",
+		"develop": "script/develop.js"
 	},
 	"keywords": [
 		"box",
@@ -14,14 +15,17 @@
 		"lasercutter"
 	],
 	"devDependencies": {
-		"coffee-jsx-loader": "^0.1.5",
-		"css-loader": "^0.26.1",
-		"file-loader": "^0.9.0",
-		"react": "^15.4.2",
-		"react-dom": "^15.4.2",
-		"style-loader": "^0.13.1",
-		"stylus": "^0.54.5",
-		"stylus-loader": "^2.4.0",
-		"webpack": "^1.14.0"
+		"babel-eslint": "^10.0.3",
+		"eslint": "^6.5.1",
+		"eslint-plugin-react": "^7.15.1",
+		"esm": "^3.2.25",
+		"fs-extra": "^8.1.0",
+		"parcel-bundler": "^1.12.3",
+		"prettier": "1.18.2",
+		"typescript": "^3.6.3"
+	},
+	"dependencies": {
+		"react": "^16.10.1",
+		"react-dom": "^16.10.1"
 	}
 }
