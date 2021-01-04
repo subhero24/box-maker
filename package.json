@@ -1,6 +1,6 @@
 {
 	"name": "box-maker",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "A sketchup plugin for making laser cut boxes",
 	"author": "Bruno Van Damme",
 	"license": "ISC",
