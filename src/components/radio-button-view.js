@@ -1,15 +1,18 @@
 import React from "react"
 
-const RadioButtonView = props => {
+const RadioButtonView = (props) => {
 	let { label, property, options, value, onChange } = props
 
-	let handleChange = event => {
+	let handleChange = (event) => {
 		onChange(property, event.target.value)
 	}
 
-	let renderOptions = Object.entries(options).map(([key, val], index) => {
+	let index = 0
+	let optionsRender = []
+	for (let key in options) {
 		let id = `${property}-${index}`
-		return (
+		let val = options[key]
+		let render = (
 			<label key={key} className="radio" htmlFor={id}>
 				<input
 					id={id}
@@ -22,14 +25,17 @@ const RadioButtonView = props => {
 				{val}
 			</label>
 		)
-	})
+
+		index++
+		optionsRender.push(render)
+	}
 
 	return (
 		<div className="control-group">
 			<label className="control-label" htmlFor={property}>
 				{label}
 			</label>
-			<div className="controls">{renderOptions}</div>
+			<div className="controls">{optionsRender}</div>
 		</div>
 	)
 }

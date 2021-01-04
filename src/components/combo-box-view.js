@@ -1,13 +1,19 @@
 import React from "react"
 
-const ComboBoxView = props => {
+const ComboBoxView = (props) => {
 	let { label, property, options, value, onChange } = props
 
-	let handleChange = event => {
+	let handleChange = (event) => {
 		onChange(property, event.target.value)
 	}
 
-	let renderOptions = Object.entries(options).map(([key, value]) => <option key={key}>{value}</option>)
+	let optionsRender = []
+	for (let key in options) {
+		let value = options[key]
+		let render = <option key={key}>{value}</option>
+
+		optionsRender.push(render)
+	}
 
 	return (
 		<div className="control-group">
@@ -16,7 +22,7 @@ const ComboBoxView = props => {
 			</label>
 			<div className="controls">
 				<select id={property} name={property} className="input-medium" value={value} onChange={handleChange}>
-					{renderOptions}
+					{optionsRender}
 				</select>
 			</div>
 		</div>
