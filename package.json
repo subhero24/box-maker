@@ -1,16 +1,15 @@
 {
 	"name": "box-maker",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A sketchup plugin for making laser cut boxes",
 	"author": "Bruno Van Damme",
 	"license": "ISC",
 	"main": "build/main.js",
+	"type": "module",
 	"scripts": {
-		"test": "yarn run test:lint && yarn run test:typecheck",
+		"lint": "eslint src",
 		"build": "script/build.js",
-		"develop": "script/develop.js",
-		"test:lint": "eslint src",
-		"test:typecheck": "tsc"
+		"develop": "script/develop.js"
 	},
 	"keywords": [
 		"box",
@@ -18,17 +17,14 @@
 		"lasercutter"
 	],
 	"devDependencies": {
-		"babel-eslint": "^10.0.3",
-		"eslint": "^6.5.1",
-		"eslint-plugin-react": "^7.15.1",
-		"esm": "^3.2.25",
-		"fs-extra": "^8.1.0",
+		"eslint": "^8.14.0",
+		"eslint-plugin-react": "^7.29.4",
+		"fs-extra": "^10.1.0",
 		"parcel-bundler": "^1.12.3",
-		"prettier": "1.18.2",
-		"typescript": "^3.6.3"
+		"prettier": "^2.6.2"
 	},
 	"dependencies": {
-		"react": "^16.10.1",
-		"react-dom": "^16.10.1"
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
 	}
 }

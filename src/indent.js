@@ -57,14 +57,6 @@ let types = {
 	},
 };
 
-/**
- *
- * @param {number} length
- * @param {number} thickness
- * @param {string} [type]
- * @param {number} [value]
- * @returns {{ number: number, offset: number, length: number}}
- */
 let indent = (length, thickness, type = 'auto', value) => {
 	if (types[type]) {
 		return types[type](length, thickness, value);
